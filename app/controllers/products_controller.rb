@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-  	@products = Product.all
+  	@products = if params[:search]
+      Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+    else
+      Product.all
+    end
   end
 
   def show
@@ -9,7 +13,6 @@ class ProductsController < ApplicationController
   	if current_user
   		@review = @product.reviews.build
   	end
-  	
   end
 
   def new
