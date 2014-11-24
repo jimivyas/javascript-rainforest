@@ -6,9 +6,9 @@ class ProductsController < ApplicationController
       Product.all
     end
 
-    if request.xhr?
-      render @products
-    end
+    respond_to do |format|
+      format.html
+      format.js
   end
 
   def show
