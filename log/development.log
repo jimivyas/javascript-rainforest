@@ -3307,3 +3307,37 @@ ActionView::Template::Error (Missing partial products/_product with {:locale=>[:
   Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
   Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/products?utf8=%E2%9C%93&search=cat&commit=Search" for 127.0.0.1 at 2014-11-24 15:52:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"cat", "commit"=>"Search"}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  WHERE (LOWER(name) LIKE LOWER('%cat%'))
+  Rendered products/_product.html.erb (0.7ms)
+  Rendered products/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 211ms (Views: 186.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-24 15:52:54 -0500
