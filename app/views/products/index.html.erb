@@ -1,0 +1,20 @@
+<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+
+<h1>Boy, look at all these dope products!</h1>
+<%= link_to "Add a product", "/products/new" %>
+
+
+
+<div id="products">
+  <%= render @products %>
+</div>
+
+
+
+
+
