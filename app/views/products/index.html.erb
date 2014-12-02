@@ -9,37 +9,17 @@
 <%= link_to "Add a product", "/products/new" %>
 
 
+<!-- renders a helpful message with numbers of displayed vs total entries -->
+
+<h1> Products <small><%= page_entries_info @products %></small></h1>
+
+<!-- horizontal rule -->
+<hr />
+
 
 <div id="products">
-  <%= render @products %>
+	<%= render @products %>
 </div>
+<!-- makes pagination links en the standard way -->
 
-<!-- 
-<script type="text/javascript">
-	function display_search_results() {
-		// remember, readyState === 4 => request completes successfully
-		if (this.readyState ==== 4) {
-			console.log(this);
-			document.getElementByID('products').innerHTML = this.responseText;
-
-
-		}
-	}
-
-	var form = document.getElementByID('search-form');
-	form.addEventListener('submit', function(event) {
-		event.preventDefault();
-		var searchValue = document.getElementByID('search').value;
-
-		var xhr = new XMLHttpRequest();
-		xhr.onload = display_search_results;
-		xhr.open('GET', '/products?search=' + searchValue, true);
-		xhr.setRequestHeader("X-Requested_With", "XMLHttpRequest");
-		xhr.send();
-	});
-
-
-</script>
-
-
- -->
+<%= paginate @products %>

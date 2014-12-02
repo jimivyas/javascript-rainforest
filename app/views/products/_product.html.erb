@@ -1,7 +1,9 @@
-<p>
-
-	<h3><%= product.name%> </h3>
-	<br />
-	<p><%= product.description %> </p>
-	<%= link_to "View Product Page", "/products/#{product.id}" %>
-</p>
+<%= link_to product_path(product.id) do %>
+	<h2>
+		<%= product.formatted_price %>
+		<%= product.name %>
+	</h2>
+	<% end %> 
+	<!-- this end ends the link_to do -->
+	<!-- decsription <= 100 chars -->
+	<p><%= truncate(product.description, length: 100) %></p>
