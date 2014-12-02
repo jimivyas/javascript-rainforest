@@ -8165,3 +8165,343 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-01 22:37:41 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 22:37:41 -0500
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:48 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "testero"], ["created_at", "2014-12-02 03:53:48.585322"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:48.585322"], ["user_id", 5]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  Rendered products/_reviews.html.erb (1.1ms)
+  Rendered reviews/create.js.erb (3.2ms)
+Completed 500 Internal Server Error in 23ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (4.0ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (32.9ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:50 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 106]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "testero"], ["created_at", "2014-12-02 03:53:50.730854"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:50.730854"], ["user_id", 5]]
+  [1m[35m (9.5ms)[0m  commit transaction
+  Rendered products/_reviews.html.erb (0.6ms)
+  Rendered reviews/create.js.erb (1.6ms)
+Completed 500 Internal Server Error in 21ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.2ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.7ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (24.1ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:51 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "testero"], ["created_at", "2014-12-02 03:53:51.089525"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:51.089525"], ["user_id", 5]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  Rendered products/_reviews.html.erb (1.3ms)
+  Rendered reviews/create.js.erb (3.3ms)
+Completed 500 Internal Server Error in 25ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.5ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (23.2ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:51 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 106]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "testero"], ["created_at", "2014-12-02 03:53:51.267377"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:51.267377"], ["user_id", 5]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  Rendered products/_reviews.html.erb (0.9ms)
+  Rendered reviews/create.js.erb (2.0ms)
+Completed 500 Internal Server Error in 22ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (20.2ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:51 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "testero"], ["created_at", "2014-12-02 03:53:51.451351"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:51.451351"], ["user_id", 5]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  Rendered products/_reviews.html.erb (0.9ms)
+  Rendered reviews/create.js.erb (2.3ms)
+Completed 500 Internal Server Error in 22ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.6ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (18.4ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:51 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 106]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "testero"], ["created_at", "2014-12-02 03:53:51.609730"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:51.609730"], ["user_id", 5]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  Rendered products/_reviews.html.erb (0.7ms)
+  Rendered reviews/create.js.erb (1.8ms)
+Completed 500 Internal Server Error in 24ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (15.4ms)
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:53:51 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"testero"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "testero"], ["created_at", "2014-12-02 03:53:51.899719"], ["product_id", 106], ["updated_at", "2014-12-02 03:53:51.899719"], ["user_id", 5]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  Rendered products/_reviews.html.erb (0.8ms)
+  Rendered reviews/create.js.erb (1.8ms)
+Completed 500 Internal Server Error in 20ms
+
+SyntaxError (/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jimi/Documents/Bitmaker Labs/Assignments/rainforest_ajax/app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/_reviews.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/_reviews.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/reviews/create.js.erb:1:in `_app_views_reviews_create_js_erb___185775054269198083_70191494156760'
+
+
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/jimi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (20.5ms)
+
+
+Started GET "/products/106" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 106]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."product_id" = ?  [["product_id", 106]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_reviews.html.erb (10.0ms)
+  Rendered products/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 22:54:15 -0500
+
+
+Started POST "/products/106/reviews" for 127.0.0.1 at 2014-12-01 22:54:19 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"test 333"}, "commit"=>"Create Review", "product_id"=>"106"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 106]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "test 333"], ["created_at", "2014-12-02 03:54:19.415919"], ["product_id", 106], ["updated_at", "2014-12-02 03:54:19.415919"], ["user_id", 5]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."product_id" = ?  [["product_id", 106]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_reviews.html.erb (8.8ms)
+  Rendered reviews/create.js.erb (10.2ms)
+Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+Processing by ProductsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"   ORDER BY products.created_at DESC LIMIT 8 OFFSET 0
+  Rendered products/_product.html.erb (1.8ms)
+  Rendered products/index.html.erb within layouts/application (36.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 124ms (Views: 122.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 22:56:39 -0500
+
+
+Started GET "/products?page=2&_=1417492599266" for 127.0.0.1 at 2014-12-01 23:28:41 -0500
+Processing by ProductsController#index as JS
+  Parameters: {"page"=>"2", "_"=>"1417492599266"}
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products"   ORDER BY products.created_at DESC LIMIT 8 OFFSET 8
+  Rendered products/_product.html.erb (1.6ms)
+  Rendered products/_product.html.erb (1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  Rendered products/index.js.erb (36.4ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/96" for 127.0.0.1 at 2014-12-01 23:28:41 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 96]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."product_id" = ?  [["product_id", 96]]
+  Rendered products/_reviews.html.erb (1.9ms)
+  Rendered products/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/products/96/reviews" for 127.0.0.1 at 2014-12-01 23:28:44 -0500
+Processing by ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "review"=>{"comment"=>"fsa"}, "commit"=>"Create Review", "product_id"=>"96"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 96]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reviews" ("comment", "created_at", "product_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["comment", "fsa"], ["created_at", "2014-12-02 04:28:44.397186"], ["product_id", 96], ["updated_at", "2014-12-02 04:28:44.397186"], ["user_id", 5]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."product_id" = ?  [["product_id", 96]]
+  Rendered products/_reviews.html.erb (2.2ms)
+  Rendered reviews/create.js.erb (3.5ms)
+Completed 200 OK in 23ms (Views: 7.4ms | ActiveRecord: 9.3ms)
